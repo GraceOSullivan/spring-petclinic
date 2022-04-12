@@ -6,12 +6,13 @@
 trigger:
 - main
 
-# pool:
-#   vmImage: 'ubuntu-18.04'
+pool:
+  vmImage: 'windows-2019'
 
-# container: ubuntu:18.04
+container: mcr.microsoft.com/windows/servercore:ltsc2019
 
 steps:
+- script: set
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'

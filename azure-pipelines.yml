@@ -9,11 +9,6 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-container: mcr.microsoft.com/dotnet/core/sdk:2.2
-
-variables:
-  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
-
 steps:
 - task: Maven@3
   inputs:

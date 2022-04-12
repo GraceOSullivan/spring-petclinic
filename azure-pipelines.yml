@@ -7,9 +7,9 @@ trigger:
 - main
 
 pool:
-  vmImage: 'windows-2019'
+  vmImage: 'ubuntu-18.04'
 
-container: mcr.microsoft.com/windows/servercore:ltsc2019
+container: ubuntu:18.04
 
 steps:
 - task: Maven@3

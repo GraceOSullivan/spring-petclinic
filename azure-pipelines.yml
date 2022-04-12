@@ -22,11 +22,13 @@ steps:
     goals: 'package'
     
 - task: PublishTestResults@1
+  displayname: 'Publish JUnit Test Results'
   inputs:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
 
 - task: PublishCodeCoverageResults@1
+  displayname: 'Publish Code Coverage Results'
   inputs:
     codeCoverageTool: "JaCoCo"
     summaryFileLocation: "$(System.DefaultWorkingDirectory)/**/site/jacoco/jacoco.xml"

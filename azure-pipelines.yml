@@ -12,9 +12,6 @@ pool:
 container: mcr.microsoft.com/windows/servercore:ltsc2019
 
 steps:
-- script: set
-
-steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'

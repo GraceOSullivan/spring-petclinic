@@ -6,10 +6,10 @@
 trigger:
 - main
 
-pool:
-  vmImage: 'ubuntu-18.04'
+# pool:
+#   vmImage: 'ubuntu-18.04'
 
-container: ubuntu:18.04
+# container: ubuntu:18.04
 
 steps:
 - task: Maven@3
@@ -19,9 +19,12 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
+    goals: 'package'
+    
+- task: PublishTestResults@1
+  inputs:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
 
 - task: PublishCodeCoverageResults@1
   inputs:

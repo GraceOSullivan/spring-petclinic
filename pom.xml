@@ -253,6 +253,16 @@
         <enabled>false</enabled>
       </snapshots>
     </repository>
+    <repository>
+      <id>GraceEOSullivan</id>
+      <url>https://pkgs.dev.azure.com/GraceEOSullivan/_packaging/GraceEOSullivan/maven/v1</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
   </repositories>
 
   <pluginRepositories>

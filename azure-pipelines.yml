@@ -28,10 +28,10 @@ steps:
     goals: 'package'
     
 - task: Maven@3
- inputs:       
+  inputs:       
     publishJUnitResults: true    
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
- displayName: "Publish JUnit Results"
+  displayName: "Publish JUnit Results"
 
 - task: PublishCodeCoverageResults@1
   inputs:

@@ -25,9 +25,13 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+    
+- task: Maven@3
+ displayName: "Publish JUnit Results"
+ inputs:       
+    publishJUnitResults: true    
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
 
 - task: PublishCodeCoverageResults@1
   inputs:
